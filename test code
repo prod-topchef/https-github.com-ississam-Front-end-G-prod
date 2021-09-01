@@ -1,0 +1,14 @@
+
+<script>
+// Storing data:
+const myObj = [{ name: "John", age: 31, city: "New York" },];
+myObj.push({ name: "iss", age: 31, city: "New York" },);
+myObj.push({ name: "test", age: 31, city: "New York" },);
+const myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+
+// Retrieving data:
+let text = localStorage.getItem("testJSON");
+let obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj[0].name;
+</script>
